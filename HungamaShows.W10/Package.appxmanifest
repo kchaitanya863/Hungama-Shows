@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="29156kchaitanya.HungamaShows" Publisher="CN=0EEEEAE3-9651-483C-AB3C-5FC101B8FA52" Version="5.8.3.0" />
+  <mp:PhoneIdentity PhoneProductId="16378817-0570-4a3c-8969-d6bfa40cf7a4" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Hungama Shows</DisplayName>
+    <PublisherDisplayName>kchaitanya</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HungamaShows.App">
+      <uap:VisualElements DisplayName="Hungama Shows" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Watch your favorite Hungama shows." BackgroundColor="transparent">
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#000000" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <uap:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile10?config=ewEAAB~LCAAAAAAABABNT8FOhDAQ/ZVmzhzYxBjl5q7GGKOrgvFgPHRhFkZLS4aWSAj/7hR2E9PLzHuv772Z4LYvxg4hu0xk3Dl7pBqyCV4D8rgyMFCFrodkBQWwZL~1OrhRsbZes1NkVUO2InUMxijsqHcVxi97rpBX28Dak7PRfUG3YpXOIrkJvnlE2S7S682VIAW2ndEeo7Qgg8~6jT0eWl2jeG4ltSIrPVMpTb1ox5NE2Ht2oesh~5wgD4d/2wdS3XjINmkaI3597nX5c/a5M9ii9as0spBZuSU5pUqTnMtziXc2kvSGrRvwSXNNcpXngAns2HWL335All7L/GJ0ubhL~Dx/LW/~A1eiUuJ7AQAA" />
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

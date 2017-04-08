@@ -1,0 +1,9 @@
+[
+  {
+    "MenuType": "DeepLink",
+    "Title": "Mail",
+    "Icon": "/Assets/DataImages/mail.png",
+    "Target": "mailto:hungamashows@outlook.com",
+    "_id": "322ddce3-ca76-4b89-b9af-c8554f05b0ef"
+  }
+]
