@@ -146,9 +146,9 @@
           // showName = showName.replace(' ','+');
           this.selectedShow = showName;
           showName = showName.replace(/!/g,  '%21').replace(/'/g,  '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
-          console.log("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+showName+"+full+episodes+in+"+this.selectedLanguage+"&key=AIzaSyDkvCD_V5uo3puVkY_FvqQdTr4ncDk6XAU");
+          console.log("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+showName+"+full+episodes+in+"+this.selectedLanguage+"&key=AIzaSyDpgdG4ipJ5NyrmDqTpCLY5bnN3_lv0dnU");
           if(this.stored[showName] == null)
-          axios.get("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+showName+"+full+episodes+in+"+this.selectedLanguage+"&key=AIzaSyDkvCD_V5uo3puVkY_FvqQdTr4ncDk6XAU")
+          axios.get("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+showName+"+full+episodes+in+"+this.selectedLanguage+"&key=AIzaSyDpgdG4ipJ5NyrmDqTpCLY5bnN3_lv0dnU")
           .then(response => {this.selected = response.data; this.stored[showName] = response.data;})
           else{
             this.selected = this.stored[showName];
@@ -163,7 +163,7 @@
         sync: function(){
           var showName = this.selectedShow;
           showName = showName.replace(/!/g,  '%21').replace(/'/g,  '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
-          this.selected = axios.get("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+showName+"+full+episodes+in+"+this.selectedLanguage+"&key=AIzaSyDkvCD_V5uo3puVkY_FvqQdTr4ncDk6XAU")
+          this.selected = axios.get("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+showName+"+full+episodes+in+"+this.selectedLanguage+"&key=AIzaSyDpgdG4ipJ5NyrmDqTpCLY5bnN3_lv0dnU")
           .then(response => {this.selected = response.data; this.stored[showName] = response.data;})
           this.saveToLocal();
         },
@@ -214,7 +214,7 @@
           this.selected = JSON.parse(localStorage.getItem('selectedShow'));
         if(localStorage.getItem('selectedLanguage') != null)
           this.selectedLanguage = localStorage.getItem('selectedLanguage');
-        // axios.get("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=chota+bheem&key=AIzaSyDkvCD_V5uo3puVkY_FvqQdTr4ncDk6XAU")
+        // axios.get("https://content.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=chota+bheem&key=AIzaSyDpgdG4ipJ5NyrmDqTpCLY5bnN3_lv0dnU")
         //   .then(response => {this.selected = response.data; })
         this.selectedShow = this.items2[0].text;
         this.sync();
